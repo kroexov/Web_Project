@@ -47,9 +47,19 @@ body {
 aside{
     float:right;
     width: 30%;
+    min-height: 500px;
+    max-height: 500px;
+    min-width: 500px;
     margin-right: 50px;
     margin-top: 50px;
     background : #ffffff;
+}
+
+img{
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    filter: drop-shadow(30px 10px 4px #000000);
 }
 
 #header h1 {
@@ -69,11 +79,31 @@ aside{
     list-style: none;
 }
 #nav ul li a {
-    display: block;
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
     text-decoration: none;
-    font-size: 20px;
-    color: #fff;
-    text-shadow: #000 0 0 3px;
-    -webkit-font-smoothing: antialiased;
-    padding: 0 10px;
+    user-select: none;
+    padding: .1em 1em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
 }
+
+#nav ul li a:hover { background: rgba(255,255,255,.2); }
+#nav ul li a:active { background: white; }
+
+.knopka {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    user-select: none;
+    background: #FF735C;
+    padding: .9em 1.5em;
+    outline: none;
+}
+.knopka:hover { background: rgb(232,95,76); }
+.knopka:active { background: rgb(152,15,0); }
+
