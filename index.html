@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="инвестиции, калькулятор, рынок, новостьи, статьи, деньги">
-    <link rel="stylesheet" type="text/css" href="outline.css">
+    <link rel="stylesheet" type="text/css" href="styles/outline.css">
     <link rel="stylesheet" type="text/css" href="styles/range-slider.css">
     <link rel="stylesheet" type="text/x-scss" href="styles/slider-2.scss">
-    <script src="js/somejs.js"></script>
     <title>
         Responsive Header Demo
     </title>
@@ -32,13 +31,14 @@
         </nav>
     </div>
 </header>
+<main>
 <aside class = "aside">
 <img src="images/business-growth-1-1057028.jpg" alt="hi">
 </aside>
 <div class="content">
     <div class="container">
         <section>
-            <h1>Выбор валюты</h1>
+            <h2>Выбор валюты</h2>
             <button class = "knopka">$</button>
             <button class = "knopka">€</button>
             <button class = "knopka">₽</button>
@@ -46,7 +46,7 @@
     </div>
     <div class="container">
         <section>
-        <h1>Выбор начала и конца срока инвестирования</h1>
+        <h2>Выбор начала и конца срока инвестирования</h2>
             </section>
         <div slider id="slider-distance">
             <div>
@@ -56,7 +56,7 @@
                 <span thumb style="left:30%;"></span>
                 <span thumb style="left:60%;"></span>
                 <div sign style="left:30%;">
-                    <span id="value">30</span>
+                    <span>30</span>
                 </div>
                 <div sign style="left:60%;">
                     <span id="value">60</span>
@@ -83,22 +83,32 @@
     </div>
     <div class="container">
         <section>
-            <h1>Сколько у вас денег?</h1>
+            <h2>Сколько у вас денег?</h2>
+            <input type="range" min="0" max="40">
         </section>
-        <input type="range" min="0" max="40">
     </div>
     <div class="container">
         <section>
-            <h1>Сколько будете откладывать в месяц?</h1>
+            <h2>Сколько будете откладывать в месяц?</h2>
+            <input type="range" min="0" max="40">
         </section>
-        <input type="range" min="0" max="40">
     </div>
     <div class="container">
         <section>
-            <h1>Среднегодовая доходность в %</h1>
+            <h2>Среднегодовая доходность в %</h2>
+            <input type="range" min="0" max="40">
         </section>
-        <input type="range" min="0" max="40">
+    </div>
+    <div class="container">
+        <section>
+            <h2>Играемся со шрифтами</h2>
+            <p>обычный текст 1</p>
+            <p>обычный текст 2</p>
+            <p>обычный текст 3</p>
+            <p>обычный текст 4</p>
+        </section>
     </div>
 </div>
+</main>
 </body>
 </html>
