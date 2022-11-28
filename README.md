@@ -8,3 +8,12 @@
 ### Макет главной страницы:
 ![image](https://user-images.githubusercontent.com/79146846/193525259-aec3d6f3-b0a5-407f-ac3f-e156e5e66412.png)
 
+### Главная страница на этапе 1 ЛР:
+![image](https://user-images.githubusercontent.com/79146846/201644548-917cddc4-6b22-4cb3-bf71-61b3e43cfaf5.png)
+
+### Идеалы, к которым стремится автор:
+
+![image](https://user-images.githubusercontent.com/79146846/201644660-37ccc94e-f271-4b07-bb54-1855cb7d6b06.png)
+
+![image](https://user-images.githubusercontent.com/79146846/201644726-35f5b5ef-0554-489a-a27b-a772bf03f635.png)
+
