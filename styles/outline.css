@@ -82,7 +82,7 @@ img{
 #nav ul li a {
     display: inline-block;
     color: black;
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: 700;
     text-decoration: none;
     user-select: none;
@@ -125,9 +125,9 @@ img{
 
 #text2{
     font-size: 15px;
-    font-family: Impact, serif;
+    font-family: Open Sans, sans-serif;
     word-spacing: revert;
-    font-weight: 30;
+    font-weight: 300;
     background: #1bbde8;
 }
 
@@ -144,8 +144,8 @@ img{
 
 #formatting{
     font-size: 15px;
-    font-family: Impact, serif;
+    font-family: Open Sans, sans-serif;
     word-spacing: revert;
-    font-weight: 30;
+    font-weight: 300;
     background: #1bbde8;
 }
