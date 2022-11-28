@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="инвестиции, калькулятор, рынок, новостьи, статьи, деньги">
     <link rel="stylesheet" type="text/css" href="styles/outline.css">
     <link rel="stylesheet" type="text/css" href="styles/range-slider.css">
@@ -13,9 +14,9 @@
 <body>
 <header id="header">
     <div class="container">
-        <h2>
+        <h1>
             Investment Calculator
-        </h2>
+        </h1>
         <nav id="nav">
             <ul>
                 <li>
@@ -32,11 +33,12 @@
     </div>
 </header>
 <main>
+
 <aside class = "aside">
-<img src="images/business-growth-1-1057028.jpg" alt="hi">
+    <img src="images/business-growth-1-1057028.jpg" alt="hi">
 </aside>
 <div class="content">
-    <div class="container">
+    <div class="container" id = row1container>
         <section>
             <h2>Выбор валюты</h2>
             <button id="button1" class = "knopka">$</button>
@@ -104,17 +106,6 @@
             <h2>Среднегодовая доходность в %</h2>
             <input id = "moneyPercent" type="range" value="24" min="1" max="100">
             <output>24</output>
-        </section>
-    </div>
-    <div class="container">
-        <section id = textsection>
-            <h2>Играемся с текстом</h2>
-            <p id="text1">обычный текст 1, align установим на end</p>
-            <p id="text2">обычный текст 2</p>
-            <p id="text3">обычный текст 3</p>
-            <pre id = "formatting">
-                <code>жёстко форматируем код</code>
-            </pre>
         </section>
     </div>
 </div>
