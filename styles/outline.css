@@ -62,7 +62,7 @@ img{
     filter: drop-shadow(30px 10px 4px #000000);
 }
 
-#header h2 {
+#header h1 {
     text-transform: uppercase;
     font-size: 1.2em;
     color: #fff;
@@ -104,8 +104,47 @@ img{
     padding: .9em 1.5em;
     outline: none;
 }
+
 .knopka:hover { background: rgb(232,95,76); }
-.knopka:active { background: rgb(152,15,0); }
+.knopka:active,
+.active {
+    background: rgb(152,15,0);
+    top: 2px;
+    left: 1px;
+    box-shadow: none;
+}
 
+#text1{
+    font-style: oblique;
+    font-size: 20px;
+    text-indent: 20px;
+    text-align: end;
+    color: darkred;
+}
 
+#text2{
+    font-size: 15px;
+    font-family: Impact, serif;
+    word-spacing: revert;
+    font-weight: 30;
+    background: #1bbde8;
+}
 
+#text3{
+    font-style: italic;
+    line-height: 100px;
+    text-transform: lowercase;
+    vertical-align: bottom;
+}
+
+#textsection{
+    width: 300px;
+}
+
+#formatting{
+    font-size: 15px;
+    font-family: Impact, serif;
+    word-spacing: revert;
+    font-weight: 30;
+    background: #1bbde8;
+}

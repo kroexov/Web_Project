@@ -5,7 +5,7 @@
     <meta name="keywords" content="инвестиции, калькулятор, рынок, новостьи, статьи, деньги">
     <link rel="stylesheet" type="text/css" href="styles/outline.css">
     <link rel="stylesheet" type="text/css" href="styles/range-slider.css">
-    <link rel="stylesheet" type="text/x-scss" href="styles/slider-2.scss">
+    <script type="text/javascript" src="js/buttons.js"></script>
     <title>
         Responsive Header Demo
     </title>
@@ -39,9 +39,9 @@
     <div class="container">
         <section>
             <h2>Выбор валюты</h2>
-            <button class = "knopka">$</button>
-            <button class = "knopka">€</button>
-            <button class = "knopka">₽</button>
+            <button id="button1" class = "knopka">$</button>
+            <button id="button2" class = "knopka">€</button>
+            <button id="button3" class = "knopka">₽</button>
         </section>
     </div>
     <div class="container">
@@ -62,50 +62,59 @@
                     <span id="value">60</span>
                 </div>
             </div>
+
+
             <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
-  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-  var children = this.parentNode.childNodes[1].childNodes;
-  children[1].style.width=value+'%';
-  children[5].style.left=value+'%';
-  children[7].style.left=value+'%';children[11].style.left=value+'%';
-  children[11].childNodes[1].innerHTML=this.value;" />
+              this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+              var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+              var children = this.parentNode.childNodes[1].childNodes;
+              children[1].style.width=value+'%';
+              children[5].style.left=value+'%';
+              children[7].style.left=value+'%';children[11].style.left=value+'%';
+              children[11].childNodes[1].innerHTML=this.value;" />
 
             <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
-  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-  var children = this.parentNode.childNodes[1].childNodes;
-  children[3].style.width=(100-value)+'%';
-  children[5].style.right=(100-value)+'%';
-  children[9].style.left=value+'%';children[13].style.left=value+'%';
-  children[13].childNodes[1].innerHTML=this.value;" />
+              this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+              var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+              var children = this.parentNode.childNodes[1].childNodes;
+              children[3].style.width=(100-value)+'%';
+              children[5].style.right=(100-value)+'%';
+              children[9].style.left=value+'%';children[13].style.left=value+'%';
+              children[13].childNodes[1].innerHTML=this.value;" />
+
+
         </div>
     </div>
     <div class="container">
         <section>
             <h2>Сколько у вас денег?</h2>
-            <input type="range" min="0" max="40">
+            <input id = "moneyCurrent" type="range" value="10000" min="1" max="1000000">
+            <output>10000$</output>
         </section>
     </div>
     <div class="container">
         <section>
             <h2>Сколько будете откладывать в месяц?</h2>
-            <input type="range" min="0" max="40">
+            <input id = "moneySaving" type="range" value="200" min="1" max="1000" >
+            <output>200$</output>
         </section>
     </div>
     <div class="container">
         <section>
             <h2>Среднегодовая доходность в %</h2>
-            <input type="range" min="0" max="40">
+            <input id = "moneyPercent" type="range" value="24" min="1" max="100">
+            <output>24</output>
         </section>
     </div>
     <div class="container">
-        <section>
-            <h2>Играемся со шрифтами</h2>
-            <p>обычный текст 1</p>
-            <p>обычный текст 2</p>
-            <p>обычный текст 3</p>
-            <p>обычный текст 4</p>
+        <section id = textsection>
+            <h2>Играемся с текстом</h2>
+            <p id="text1">обычный текст 1, align установим на end</p>
+            <p id="text2">обычный текст 2</p>
+            <p id="text3">обычный текст 3</p>
+            <pre id = "formatting">
+                <code>жёстко форматируем код</code>
+            </pre>
         </section>
     </div>
 </div>

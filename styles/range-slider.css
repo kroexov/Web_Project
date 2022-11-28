@@ -173,3 +173,4 @@ div[slider] > input[type=range]::-ms-tooltip {
 [slider]:hover > div > [sign] {
   opacity: 1;
 }
+
