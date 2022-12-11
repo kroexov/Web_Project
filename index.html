@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="styles/range-slider.css">
     <script type="text/javascript" src="js/buttons.js"></script>
     <title>
-        Responsive Header Demo
+        Investment calculator
     </title>
 </head>
 <body>
@@ -20,13 +20,13 @@
         <nav id="nav">
             <ul>
                 <li>
-                    <a href = "https://investmentcalculator.io/">Интересные статьи</a>
+                    <a href = "pages/stocks.html">Портфель акций</a>
                 </li>
                 <li>
-                    <a href = "https://journal.open-broker.ru/services/invest-calculator/">Советы по экономии</a>
+                    <a href="#">Советы по экономии</a>
                 </li>
                 <li>
-                    <a href = "https://github.com/kroexov/Web_Project">Новости про рынок</a>
+                    <a href = "https://github.com/kroexov/Web_Project">Статьи и новости</a>
                 </li>
             </ul>
         </nav>
@@ -34,17 +34,18 @@
 </header>
 <main>
 
-<aside class = "aside">
-    <img src="images/business-growth-1-1057028.jpg" alt="hi">
-</aside>
+
 <div class="content">
     <div class="container" id = row1container>
-        <section>
+        <section id = "currencies">
             <h2>Выбор валюты</h2>
             <button id="button1" class = "knopka">$</button>
             <button id="button2" class = "knopka">€</button>
             <button id="button3" class = "knopka">₽</button>
         </section>
+    </div>
+    <div class = "aside">
+        <img src="images/business-growth-1-1057028.jpg" alt="hi">
     </div>
     <div class="container">
         <section>
@@ -66,23 +67,9 @@
             </div>
 
 
-            <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
-              this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-              var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-              var children = this.parentNode.childNodes[1].childNodes;
-              children[1].style.width=value+'%';
-              children[5].style.left=value+'%';
-              children[7].style.left=value+'%';children[11].style.left=value+'%';
-              children[11].childNodes[1].innerHTML=this.value;" />
+            <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="DoubleRangeOnInput1(this)" />
 
-            <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
-              this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-              var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-              var children = this.parentNode.childNodes[1].childNodes;
-              children[3].style.width=(100-value)+'%';
-              children[5].style.right=(100-value)+'%';
-              children[9].style.left=value+'%';children[13].style.left=value+'%';
-              children[13].childNodes[1].innerHTML=this.value;" />
+            <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="DoubleRangeOnInput2(this)" />
 
 
         </div>
@@ -90,21 +77,21 @@
     <div class="container">
         <section>
             <h2>Сколько у вас денег?</h2>
-            <input id = "moneyCurrent" type="range" value="10000" min="1" max="1000000">
+            <input id = "moneyCurrent" type="range" value="10000" min="1" max="10000000" oninput="SimpleRangeOnInput(this)">
             <output>10000$</output>
         </section>
     </div>
     <div class="container">
         <section>
             <h2>Сколько будете откладывать в месяц?</h2>
-            <input id = "moneySaving" type="range" value="200" min="1" max="1000" >
+            <input id = "moneySaving" type="range" value="200" min="1" max="100000" oninput="SimpleRangeOnInput(this)">
             <output>200$</output>
         </section>
     </div>
     <div class="container">
         <section>
             <h2>Среднегодовая доходность в %</h2>
-            <input id = "moneyPercent" type="range" value="24" min="1" max="100">
+            <input id = "moneyPercent" type="range" value="24" min="1" max="50" oninput="this.nextElementSibling.value = this.value">
             <output>24</output>
         </section>
     </div>
