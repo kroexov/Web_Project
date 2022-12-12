@@ -175,7 +175,7 @@ img {
     grid-row: 1;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1010px) {
     #header h1 {
         display: none;
     }

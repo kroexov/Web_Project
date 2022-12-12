@@ -6,7 +6,13 @@ table {
     margin-top: 10px;
     min-width: 100vw;
     display: grid;
-    grid-template-columns: 25% 25% 20% 30%;
+    max-width: 100%;
+    grid-template-columns:
+    minmax(auto, 25%)
+    minmax(auto, 25%)
+    minmax(auto, 20%)
+    minmax(auto, 30%);
+    grid-gap: 10px;
 }
 
 thead,
