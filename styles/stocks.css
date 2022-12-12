@@ -12,7 +12,6 @@ table {
     minmax(auto, 25%)
     minmax(auto, 20%)
     minmax(auto, 30%);
-    grid-gap: 10px;
 }
 
 thead,
