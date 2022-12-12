@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Add new stocks</title>
+  <link rel="stylesheet" type="text/css" href="/styles/stocks.css">
+  <link rel="stylesheet" type="text/css" href="/styles/outline.css">
+  <script src="js/stocksScript.js"></script>
+  <script src="js/stockAdder.js"></script>
+</head>
+<body>
+
+<form onsubmit="GetStock()">
+<label for="name">Tag of the stock (1 to 5 characters):</label>
+<input type="text" id="name" name="name" required
+       minlength="1" maxlength="5" size="10">
+  <input type="submit" id="submitter" >
+</form>
+
+<table id = "table">
+  <thead>
+  <tr>
+    <th data-type="text-short">Tag</th>
+    <th data-type="text-short">Price per one</th>
+    <th data-type="numeric">Total count </th>
+    <th data-type="text-short">Change today </th>
+  </tr>
+</table>
+</body>
+</html>

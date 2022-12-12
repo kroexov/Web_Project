@@ -114,11 +114,11 @@ img {
 }
 
 .knopka {
-    color: #fff;
+    color: #FFFFFF;
     font-size: 20px;
     text-decoration: none;
     user-select: none;
-    background: #FF735C;
+    background: #FA722C;
     padding: .9em 1.5em;
     outline: none;
 }
