@@ -28,6 +28,7 @@ body {
     position: sticky;
     top: 0;
     width: 100%;
+    height: 67px;
     line-height: 60px;
 
     background : -moz-linear-gradient(0deg,rgba(255, 115, 92, 1) 0%,rgba(255, 174, 92, 1) 50%,rgba(255, 171, 92, 1) 67.47%,rgba(255, 163, 92, 1) 78.57%,rgba(255, 148, 92, 1) 87.88%,rgba(255, 127, 92, 1) 96.17%,rgba(255, 115, 92, 1) 100%);
@@ -47,16 +48,22 @@ body {
 aside{
     float:right;
     width: 30%;
+    min-height: 500px;
+    max-height: 500px;
+    min-width: 500px;
     margin-right: 50px;
     margin-top: 50px;
     background : #ffffff;
 }
 
-.ul{
-    font-size: 20px;
+img{
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    filter: drop-shadow(30px 10px 4px #000000);
 }
 
-#header h2 {
+#header h1 {
     text-transform: uppercase;
     font-size: 1.2em;
     color: #fff;
@@ -73,11 +80,72 @@ aside{
     list-style: none;
 }
 #nav ul li a {
-    display: block;
+    display: inline-block;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 700;
     text-decoration: none;
-    font-size: 20px;
+    user-select: none;
+    padding: .1em 1em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 1px;
+    transition: 0.2s;
+}
+
+#nav ul li a:hover { background: rgba(255,255,255,.2); }
+#nav ul li a:active { background: white; }
+
+.knopka {
     color: #fff;
-    text-shadow: #000 0 0 3px;
-    -webkit-font-smoothing: antialiased;
-    padding: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    user-select: none;
+    background: #FF735C;
+    padding: .9em 1.5em;
+    outline: none;
+}
+
+.knopka:hover { background: rgb(232,95,76); }
+.knopka:active,
+.active {
+    background: rgb(152,15,0);
+    top: 2px;
+    left: 1px;
+    box-shadow: none;
+}
+
+#text1{
+    font-style: oblique;
+    font-size: 20px;
+    text-indent: 20px;
+    text-align: end;
+    color: darkred;
+}
+
+#text2{
+    font-size: 15px;
+    font-family: Open Sans, sans-serif;
+    word-spacing: revert;
+    font-weight: 300;
+    background: #1bbde8;
+}
+
+#text3{
+    font-style: italic;
+    line-height: 100px;
+    text-transform: lowercase;
+    vertical-align: bottom;
+}
+
+#textsection{
+    width: 300px;
+}
+
+#formatting{
+    font-size: 15px;
+    font-family: Open Sans, sans-serif;
+    word-spacing: revert;
+    font-weight: 300;
+    background: #1bbde8;
 }

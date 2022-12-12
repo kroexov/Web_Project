@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="инвестиции, калькулятор, рынок, новостьи, статьи, деньги">
-    <link href = "outline.css" rel = "stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/outline.css">
+    <link rel="stylesheet" type="text/css" href="styles/range-slider.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/buttons.js"></script>
     <title>
         Responsive Header Demo
     </title>
@@ -11,16 +16,19 @@
 <body>
 <header id="header">
     <div class="container">
-        <h2>
+        <h1>
             Investment Calculator
-        </h2>
+        </h1>
         <nav id="nav">
             <ul>
                 <li>
-                    <a href = "https://investmentcalculator.io/">Хороший сайт номер 1</a>
+                    <a href = "https://investmentcalculator.io/">Интересные статьи</a>
                 </li>
                 <li>
-                    <a href = "https://journal.open-broker.ru/services/invest-calculator/">Хороший сайт номер 2</a>
+                    <a href = "https://journal.open-broker.ru/services/invest-calculator/">Советы по экономии</a>
+                </li>
+                <li>
+                    <a href = "https://github.com/kroexov/Web_Project">Новости про рынок</a>
                 </li>
             </ul>
         </nav>
@@ -28,83 +36,91 @@
 </header>
 <main>
 <aside class = "aside">
-    <pre>
-                      ГРАФИК ВАШИХ СБЕРЕЖЕНИЙ
-
-
-       *
-       *
-       *
-       *
-       *
-       *                                            ..
-       *                                         -:.
-       *                                       .*.
-       *                                -::  .:.
-       *                               .: .*-.
-       *                         --   --
-       *                       .* :  :.
-       *                      :-  :.:
-       *                     :.
-       *            -+     .:
-       *           --:.   -:
-       *          :. .:  :.
-       *         :.   :.*.
-       *    .  .:
-       *   :.:-:
-       * .*
-       *.:
-       +:...............................................
-
-    </pre>
+<img src="images/business-growth-1-1057028.jpg" alt="hi">
 </aside>
 <div class="content">
     <div class="container">
         <section>
-            <h2>Поддерживает валюты:</h2>
-            <ul class="ul">
-                <li><strong>Доллары</strong></li>
-                <li><strong>Евро</strong></li>
-                <li><strong>Рубли</strong></li>
-            </ul>
+            <h2>Выбор валюты</h2>
+            <button id="button1" class = "knopka">$</button>
+            <button id="button2" class = "knopka">€</button>
+            <button id="button3" class = "knopka">₽</button>
         </section>
+    </div>
+    <div class="container">
         <section>
-            <h2 >Как мы рассчитываем (snippet кода)</h2>
-            <pre id="snippet">
-            <code>
-            #цель-30000000 рублей
-            target = 30000000 #цель
-            summ = 0 #сколько на счету сейчас
-            dividends = 0.02 #дивиденды - растущие 2%, накопительные 4% ближе к концу срока
-            cashflow = 10000 #сколько откладываю
-            market_growth = 1.016 #средний рост рынка в месяц - тут он 1,6% или 20% в год
-            i = 0
-            while(summ < target):
-                i+=1
-                summ+=cashflow+summ*dividends/12
-                summ*=market_growth
-                if i%12==0:
-                    summ+=52000
-                    print("прошло ",i//12," лет, сумма равна ", summ//1, " рублей, откладываю ", cashflow//1)
-            print("прошло ",i//12," лет и ", i%12, " месяца(ев), сумма равна ", summ//1, " рублей, дивиденды равны ", summ*0.04//12)
-            </code>
-        </pre>
+        <h2>Выбор начала и конца срока инвестирования</h2>
+            </section>
+        <div slider id="slider-distance">
+            <div>
+                <div inverse-left style="width:70%;"></div>
+                <div inverse-right style="width:70%;"></div>
+                <div range style="left:30%;right:40%;"></div>
+                <span thumb style="left:30%;"></span>
+                <span thumb style="left:60%;"></span>
+                <div sign style="left:30%;">
+                    <span>30</span>
+                </div>
+                <div sign style="left:60%;">
+                    <span id="value">60</span>
+                </div>
+            </div>
+
+
+            <input type="range" tabindex="0" value="30" max="100" min="0" step="1" oninput="
+              this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+              var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+              var children = this.parentNode.childNodes[1].childNodes;
+              children[1].style.width=value+'%';
+              children[5].style.left=value+'%';
+              children[7].style.left=value+'%';children[11].style.left=value+'%';
+              children[11].childNodes[1].innerHTML=this.value;" />
+
+            <input type="range" tabindex="0" value="60" max="100" min="0" step="1" oninput="
+              this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+              var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+              var children = this.parentNode.childNodes[1].childNodes;
+              children[3].style.width=(100-value)+'%';
+              children[5].style.right=(100-value)+'%';
+              children[9].style.left=value+'%';children[13].style.left=value+'%';
+              children[13].childNodes[1].innerHTML=this.value;" />
+
+
+        </div>
+    </div>
+    <div class="container">
+        <section>
+            <h2>Сколько у вас денег?</h2>
+            <input id = "moneyCurrent" type="range" value="10000" min="1" max="1000000">
+            <output>10000$</output>
         </section>
+    </div>
+    <div class="container">
         <section>
-            <h2>Формула успеха настоящего мамкиного инвестора:</h2>
-            <p>M = E<sup>Q</sup> * L<sub>n</sub></p>
-            <p>Где M - money, E - effort, Q - quality, L - luck, n - number of tries</p>
+            <h2>Сколько будете откладывать в месяц?</h2>
+            <input id = "moneySaving" type="range" value="200" min="1" max="1000" >
+            <output>200$</output>
         </section>
-        <h2>Любимая цитата создателя сайта</h2>
+    </div>
+    <div class="container">
         <section>
-        <q>Инвестируйте в меня, и я вам когда-нибудь что-нибудь верну наверное (c) </q>
-            <cite><b>Олег Тиньков</b></cite>
+            <h2>Среднегодовая доходность в %</h2>
+            <input id = "moneyPercent" type="range" value="24" min="1" max="100">
+            <output>24</output>
+        </section>
+    </div>
+    <div class="container">
+        <section id = textsection>
+            <h2>Играемся с текстом</h2>
+            <p id="text1">обычный текст 1, align установим на end</p>
+            <p id="text2">обычный текст 2</p>
+            <p id="text3">обычный текст 3</p>
+            <pre id = "formatting">
+                <code>жёстко форматируем код</code>
+            </pre>
         </section>
     </div>
 </div>
 </main>
-<footer>
-
-</footer>
 </body>
 </html>
