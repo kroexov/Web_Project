@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script type="text/javascript" src="js/buttons.js"></script>
+    <script type="text/javascript" src="js/starter.js"></script>
     <title>
         Investment calculator
     </title>
@@ -22,14 +23,14 @@
         </h1>
         <nav id="nav">
             <ul>
-                <li>
-                    <a href = "pages/stocks.html">Портфель акций</a>
+                <li id="mainPage">
+                    <a href="#">Главная страница</a>
                 </li>
-                <li>
-                    <a href="#">Советы по экономии</a>
+                <li id="stocksPage">
+                    <a href = "stocks.html">Портфель акций</a>
                 </li>
-                <li>
-                    <a href = "https://github.com/kroexov/Web_Project">Статьи и новости</a>
+                <li id="advicesPage">
+                    <a href="advices.html">Советы по экономии</a>
                 </li>
             </ul>
         </nav>
@@ -100,5 +101,13 @@
     </div>
 </div>
 </main>
+<footer>
+    <div class="container">
+        <section>
+            <h2>Page load time</h2>
+            <p id = "pageLoad"></p>
+        </section>
+    </div>
+</footer>
 </body>
 </html>
