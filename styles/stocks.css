@@ -1,0 +1,52 @@
+body {
+    font-family: BlinkMacSystemFont, "Arial", sans-serif;
+}
+
+table {
+    min-width: 100vw;
+    display: grid;
+    grid-template-columns: 25fr 25fr 20fr 30fr;
+}
+
+thead,
+tbody,
+tr {
+    display: contents;
+}
+
+th,
+td {
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #6c7ae0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: black;
+}
+
+th:last-child {
+    border: 0;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+tr:nth-child(odd) td {
+    background: lightgray;
+    opacity: 90%;
+}
+
+tr:nth-child(even) td {
+    background: aliceblue;
+    opacity: 90%;
+}
