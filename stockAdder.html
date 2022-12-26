@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Add new stocks</title>
+  <link rel="stylesheet" type="text/css" href="styles/stocks.css">
+  <link rel="stylesheet" type="text/css" href="styles/outline.css">
+  <script src="js/stockAdder.js"></script>
+  <!--<script src="js/bundle.js"></script>-->
+</head>
+<body>
+
+<form onsubmit="GetStock(); return false;">
+<label class="check-label" for="name">Tag of the stock (1 to 5 characters):</label>
+<input type="text" id="name" name="name" required
+       minlength="1" maxlength="5" size="10">
+  <label class="check-label" for="name">Price of the stock (int or double):</label>
+  <input type="number" step="0.01" id="price" name="price" required
+         size="10">
+  <label class="check-label" for="change">Change of the stock (int or double):</label>
+  <input type="number" step="0.01" id="change" name="change" required
+         size="10">
+  <input type="submit" id="submitter">
+</form>
+<button onclick="GetSavedStock()">Загрузить последнее значение</button>
+
+
+<table id = "table">
+  <thead>
+  <tr>
+    <th data-type="text-short">Tag</th>
+    <th data-type="text-short">Price per one</th>
+    <th data-type="numeric">Total count </th>
+    <th data-type="text-short">Change today </th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</body>
+</html>
