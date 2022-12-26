@@ -15,6 +15,10 @@ tr {
     display: contents;
 }
 
+.check-label {
+    display: block;
+}
+
 th,
 td {
     padding: 15px;
