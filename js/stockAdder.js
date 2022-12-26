@@ -6,20 +6,14 @@ window.addEventListener('load', function () {
         }
         if (key !== 'lastVal' && key !== 'lastPrice' && key !== 'lastChange'){
 
-            let inpval = localStorage.getItem(key).split("|")[0];
-            let count = localStorage.getItem(key).split("|")[2];
-            let inpprice = localStorage.getItem(key).split("|")[1];
-            let inpchange = localStorage.getItem(key).split("|")[3];
-
+            let retrievedObject = localStorage.getItem(key);
+            let values = JSON.parse(retrievedObject);
             let rowCount = table.rows.length;
             let row = table.insertRow(rowCount);
-            row.insertCell(0).innerHTML = inpval;
-            row.insertCell(1).innerHTML = "₽" + inpprice;
-            row.insertCell(2).innerHTML = count;
-            row.insertCell(3).innerHTML = inpchange + "%";
-            localStorage.setItem('lastVal', inpval);
-            localStorage.setItem('lastPrice', inpprice);
-            localStorage.setItem('lastChange', inpchange);
+            row.insertCell(0).innerHTML = values.val;
+            row.insertCell(1).innerHTML = "₽" + values.price;
+            row.insertCell(2).innerHTML = values.count;
+            row.insertCell(3).innerHTML = values.change + "%";
         }
     }
 });
@@ -54,8 +48,9 @@ function GetStock(){
             localStorage.setItem('lastChange', inpchange);
         }
     }
-    localStorage.setItem('row' + (table.rows.length - 1), inpval + '|' + inpprice + '|' + parseInt(table.rows[table.rows.length - 1].cells[2].innerText) +'|' + inpchange);
 
+    var testObject = { 'val': inpval, 'price': inpprice, 'count': parseInt(table.rows[table.rows.length - 1].cells[2].innerText), 'change' : inpchange };
+    localStorage.setItem('row' + (table.rows.length - 1), JSON.stringify(testObject));
     return false;
 }
 
