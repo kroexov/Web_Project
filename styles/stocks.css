@@ -5,7 +5,7 @@ body {
 table {
     min-width: 100vw;
     display: grid;
-    grid-template-columns: 25% 25% 20% 30%;
+    grid-template-columns: 25fr 25fr 20fr 30fr;
 }
 
 thead,
