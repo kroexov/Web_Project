@@ -175,6 +175,11 @@ img {
     grid-row: 1;
 }
 
+#stockAdder a {
+    color: #000000;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 900px) {
     #header h1 {
         display: none;

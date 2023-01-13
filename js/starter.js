@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
             break;
     }
 
-    var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+/*    var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
     const pageLoad = document.getElementById('pageLoad');
-    pageLoad.textContent = "loadtime is " + loadTime/1000 + " seconds";
+    pageLoad.textContent = "loadtime is " + loadTime/1000 + " seconds";*/
 });

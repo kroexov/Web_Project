@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="styles/stocks.css">
   <link rel="stylesheet" type="text/css" href="styles/outline.css">
   <script type="text/javascript" src="js/starter.js"></script>
+  <script type="text/javascript" src="js/promises.js"></script>
 </head>
 <body>
 <header id="header">
@@ -28,13 +29,20 @@
     </nav>
   </div>
 </header>
-<footer>
-  <div class="container">
-    <section>
-      <h2>Page load time</h2>
-      <p id = "pageLoad"></p>
-    </section>
+<main>
+<!--  контейнер для постов -->
+  <div id="posts">
+<!-- темплейт для постов -->
+  <template id="template">
+    <div class="container">
+      <h2 class="post__title"></h2>
+      <h3 class="post__user"></h3>
+      <p class="post__body"></p>
+    </div>
+  </template>
   </div>
+</main>
+<footer>
 </footer>
 </body>
 </html>
