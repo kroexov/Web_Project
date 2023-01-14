@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
     let table = document.getElementById('table');
     for(let key in localStorage) {
         if (!localStorage.hasOwnProperty(key)) {
-            continue; // пропустит такие ключи, как "setItem", "getItem" и так далее
+            continue;
         }
         if (key !== 'lastVal' && key !== 'lastPrice' && key !== 'lastChange'){
 
