@@ -6,12 +6,7 @@ table {
     margin-top: 10px;
     min-width: 100vw;
     display: grid;
-    max-width: 100%;
-    grid-template-columns:
-    minmax(auto, 25%)
-    minmax(auto, 25%)
-    minmax(auto, 20%)
-    minmax(auto, 30%);
+    grid-template-columns: 25fr 25fr 20fr 30fr;
 }
 
 thead,
