@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Your stocks</title>
-    <link rel="stylesheet" type="text/css" href="/styles/stocks.css">
-    <link rel="stylesheet" type="text/css" href="/styles/outline.css">
-    <script type="text/javascript" src="/js/stocks.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/stocks.css">
+    <link rel="stylesheet" type="text/css" href="styles/outline.css">
+    <script type="text/javascript" src="js/stocks.js"></script>
+    <script type="text/javascript" src="js/starter.js"></script>
 </head>
 <body>
 <header id="header">
@@ -15,14 +16,14 @@
         </h1>
         <nav id="nav">
             <ul>
-                <li>
-                    <a href="#">Портфель акций</a>
+                <li id="mainPage">
+                    <a href="index.html">Главная страница</a>
                 </li>
-                <li>
-                    <a href="#">Советы по экономии</a>
+                <li id="stocksPage">
+                    <a href = "#">Портфель акций</a>
                 </li>
-                <li>
-                    <a href="https://github.com/kroexov/Web_Project">Статьи и новости</a>
+                <li id="advicesPage">
+                    <a href="advices.html">Советы по экономии</a>
                 </li>
             </ul>
         </nav>
@@ -80,5 +81,13 @@
         </tr>
     </table>
 </main>
+<footer>
+    <div class="container">
+        <section>
+            <h2>Page load time</h2>
+            <p id = "pageLoad"></p>
+        </section>
+    </div>
+</footer>
 </body>
 </html>

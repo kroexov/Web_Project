@@ -3,6 +3,7 @@ body {
 }
 
 table {
+    margin-top: 10px;
     min-width: 100vw;
     display: grid;
     grid-template-columns: 25fr 25fr 20fr 30fr;
